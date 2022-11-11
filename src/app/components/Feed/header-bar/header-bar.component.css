@@ -1,0 +1,19 @@
+
+  a{
+    text-decoration: none;
+  }
+    
+  
+    .fixed-nav {
+      position:sticky;
+      top: 0;
+      z-index: 100;
+    }
+  
+    .fixed-content {
+      position:sticky;
+      overflow-x:hidden;
+      overflow-y: hidden;
+      top:0;
+      z-index: 1;
+    }

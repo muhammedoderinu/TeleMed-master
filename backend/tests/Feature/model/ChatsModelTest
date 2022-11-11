@@ -1,0 +1,21 @@
+<?php
+use App\Models\ChatMessage;
+use App\Models\User;
+use App\Models\Chat;
+use Illuminate\Foundation\Testing\RefreshDatabase;
+
+uses(RefreshDatabase::class);
+
+beforeEach(fn () => $this->chat = Chat::factory()->create());
+
+test('can create chat')->assertDatabaseCount(Chat::class, 1);
+
+it('has users', function () {
+    $this->chat->users()->saveMany(User::factory(2)->make());
+    $this->assertCount(2, $this->chat->users);
+});
+
+it('has messages', function () {
+    $this->chat->messages()->saveMany(ChatMessage::factory(2)->make());
+    $this->assertCount(2, $this->chat->messages);
+});

@@ -1,0 +1,94 @@
+
+<!-- Pills navs -->
+<html lang="en">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <body class="bg-white">
+   
+    <div class="container">
+                
+        <div class="card bg-light">
+            <div class="card-body">
+                <section class="">
+                    <div class="container-fluid">
+                      <div class="row">
+                        <div class="col-sm-6 text-black">
+                  
+                          <div class="px-5 ms-xl-4">
+                            <i class="fa fa-crow fa-2x me-3 pt-5 mt-xl-4" style="color: #709085;"></i>
+                          
+
+                            <span class="h1 fw-bold mb-3">VirMed</span>
+
+                        
+    
+                           
+                         
+                          </div>
+                  
+                          <div class="">
+                  
+                            <form style="width: 23rem;">
+                  
+                              
+                              <p class="text-danger" >{{regError.userNameError}}</p>
+                              <div class="form-outline mb-2">
+                                <input (input) = "userInfo.userName = getValue($event)" type="text" id="user_name_id" class="form-control form-control-lg" />
+                                <p class="form-label" for="user_name_id">Username</p>
+                              </div>
+
+                              <p class="text-danger" >{{regError.emailError}}</p>
+                              <div class="form-outline mb-2">
+                                <input  (input) = "userInfo.email = getValue($event)" type="email" id="email_id" class="form-control form-control-lg" />
+                                <p class="form-label" for="email_id">Email address</p>
+                              </div>
+
+                              <p class="text-danger" >{{regError.phoneError}}</p>
+                              <div class="form-outline mb-2">
+                                <input  (input) = "userInfo.phone = getValue($event)" type="text" id="phone_id" class="form-control form-control-lg" />
+                                <p class="form-label" for="phone_id">Phone Number</p>
+                              </div>
+
+                              <p class="text-danger" >{{regError.passwordError}}</p>
+                              <div class="form-outline mb-4">
+                                <input  (input) = "userInfo.password = getValue($event)" type="password" id="form2Example28" class="form-control form-control-lg" />
+                                <p class="form-label" for="form2Example28">Password</p>
+                              </div>
+
+                              
+                              <div class="form-outline mb-2">
+                                <input (input) = "confirmPassword = getValue($event)" type="password" id="form2Example28" class="form-control form-control-lg" />
+                                <p class="form-label" for="form2Example28">Confirm password</p>
+                              </div>
+                  
+                              <div class="pt-1 mb-2">
+                                <button (click) = "getUser()" class="btn btn-success  block" type="submit">Register</button>
+                              </div>
+                  
+                             
+                            </form>
+                            <div>
+                              <p class = "text-muted">Already have an Account <a href="login" class="link-success">Login </a></p>
+                             </div>
+                           
+                  
+                          </div>
+                  
+                        </div>
+                        <div class="col-sm-6 px-0 d-none d-sm-block">
+                          <img  src="./assets/image/doctor.jpg"
+                            alt="Login image" class="w-100 vh-100" style="object-fit: cover; object-position: left;">
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+            
+
+            </div>
+        </div>
+       
+    </div>
+       
+</body>
+</html>
+
+

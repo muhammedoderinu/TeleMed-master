@@ -1,0 +1,211 @@
+
+        <div class="">
+
+
+        <!--laptop Screen-->
+
+        <section class=" d-none d-md-block">
+        <div class="container">
+            
+                    <div class="card ">
+                        <div class="card-body">
+
+                            <p class="mb">Find Doctors</p>
+                            <app-search-component></app-search-component>    
+
+                            <div class=" mt-2 mb-5">
+                              <div >
+                                <ul>
+
+                                  <li (click) = 'storeSelectedDoctor(doctor)' class="mb-5 " *ngFor="let doctor of listOfDoctor   index as i">
+                                    <a class="link-dark" >
+
+                              
+
+                                  <div class="d-flex justify-content-between align-items-center">
+                                      <div class="d-flex align-items-center">
+                                        <a class="text-decoration-none" [routerLink]="['/doctorprofilepage']">
+                                        <img
+                                          src="https://mdbootstrap.com/img/new/avatars/8.jpg"
+                                            alt=""
+                                            
+                                              style="width: 45px; height: 45px"
+                                                class="rounded-circle"
+                                              /></a>
+                                        <div class="ms-3">
+                                          <p class="fw-bold mb-1">Dr {{doctor.user.username}}</p>
+                                        </div>
+                                        
+                                      </div>
+                                      <span class="badge rounded-pill bg-success">Active</span>
+                                    
+                                  </div>
+
+                                  <div class="d-flex ml-5 ms-3 justify-content-between align-items-center">
+                                      <p class="text-muted ms-5  mb-0">{{doctor.specialization}}</p>
+                                      <div class="cborder-0  ">
+                                          
+                      
+                                          <div>
+                                              <div class="stars-outer">
+                                                  <i class="fa fa-star" aria-hidden="true"></i>
+                                                  <i class="fa fa-star" aria-hidden="true"></i>
+                                                  <i class="fa fa-star" aria-hidden="true"></i>
+                                                  <i class="fa fa-star" aria-hidden="true"></i>
+                                                  <i class="fa fa-star" aria-hidden="true"></i>
+                                  
+                                                  <div class="stars-inner" style='width:80%'>
+                                                      <i class="fa fa-star" aria-hidden="true"></i>
+                                                      <i class="fa fa-star" aria-hidden="true"></i>
+                                                      <i class="fa fa-star" aria-hidden="true"></i>
+                                                      <i class="fa fa-star" aria-hidden="true"></i>
+                                                      <i class="fa fa-star" aria-hidden="true"></i>
+                                      
+                                                  </div>
+                                  
+                                              </div>
+                                          </div>
+                                          
+                                      </div>
+
+                                    
+
+                                  </div>
+
+                                  
+                                  
+                              </a></li>
+                              </ul>
+
+                              </div>
+                                
+                            </div>
+
+
+                            <div class="d-flex justify-content-center">
+
+                                <pagination-controls class=""
+                                  previousLabel="Prev"
+                                  nextLabel="Next"
+                                  (pageChange)="onTableDataChange($event)"
+                                >
+                                </pagination-controls>
+                              </div>
+                            
+                        </div>
+                    
+                    </div>
+                </div>
+
+                
+
+            
+        </section>
+
+
+
+
+        <!---@ phone screen size-->
+        <!--mobile-->
+
+        <section class=" d-block d-md-none">
+        <div class="container">
+          
+                  <div class="card ">
+                      <div class="card-body">
+                          <p>Find Doctors</p>
+                          <div class="mb-5">
+                              <ul>
+                              <li *ngFor="let doctor of listOfDoctor index as i" [routerLink]="['/doctorprofilepage']" [state]="{doctor:doctor}" class="mb-5 "             
+                                ><a class="link-dark" >
+                              <div class="d-flex justify-content-between align-items-center">
+                                  <div class="d-flex align-items-center">
+                                    <a class ="text-decoration-none" href ="doctorprofilepage">
+                                    <img
+                                      src="https://mdbootstrap.com/img/new/avatars/8.jpg"
+                                        alt=""
+                                        
+                                          style="width: 45px; height: 45px"
+                                            class="rounded-circle"
+                                          /></a>
+                                    <div class="ms-3">
+                                      <p class="fw-bold mb-1">Dr {{doctor.user.username}}
+                                    </div>
+                                    
+                                  </div>
+                                  <span class="badge rounded-pill bg-success">Active</span>
+                                
+                              </div>
+
+                              <div class="d-flex ml-5 ms-3 justify-content-between align-items-center">
+                                  <p class="text-muted mb-0">{{doctor.specialization}}</p>
+                                  <div class="cborder-0  ">
+                                      
+                  
+                                      <div>
+                                          <div class="stars-outer">
+                                              <i class="fa fa-star" aria-hidden="true"></i>
+                                              <i class="fa fa-star" aria-hidden="true"></i>
+                                              <i class="fa fa-star" aria-hidden="true"></i>
+                                              <i class="fa fa-star" aria-hidden="true"></i>
+                                              <i class="fa fa-star" aria-hidden="true"></i>
+                              
+                                              <div class="stars-inner" style='width:80%'>
+                                                  <i class="fa fa-star" aria-hidden="true"></i>
+                                                  <i class="fa fa-star" aria-hidden="true"></i>
+                                                  <i class="fa fa-star" aria-hidden="true"></i>
+                                                  <i class="fa fa-star" aria-hidden="true"></i>
+                                                  <i class="fa fa-star" aria-hidden="true"></i>
+                                  
+                                              </div>
+                              
+                                          </div>
+                                      </div>
+                                      
+                                  </div>
+
+                                
+
+                              </div>
+
+                              
+                              
+                          </a></li>
+                          </ul>
+
+                          </div>
+
+
+                          <div class="d-flex justify-content-center">
+
+                              <pagination-controls class=""
+                                previousLabel="Prev"
+                                nextLabel="Next"
+                                (pageChange)="onTableDataChange($event)"
+                              >
+                              </pagination-controls>
+                            </div>
+                          
+                      </div>
+                  
+                  </div>
+              </div>
+
+              
+
+          
+        </section>
+
+
+
+
+
+                        
+
+        <!--end of mobile-->
+
+
+
+        </div>
+
+

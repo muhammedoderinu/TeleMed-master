@@ -1,0 +1,27 @@
+.headings{
+    font-size: 14px;
+}
+.message{
+    font-size:13px
+}
+.card-height{
+    height: 350px;
+}
+
+
+p{
+    font-family:  Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, sans-serif;
+  }
+
+  h3{
+    font-family:  Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, sans-serif;
+  }
+
+  .card-header{
+    background-color: white;
+  }
+
+  .center{
+    margin-top:200px;
+    margin-left: 300px;
+  }

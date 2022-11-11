@@ -1,0 +1,143 @@
+.card{
+    height:fit-content;
+    width:100%;
+}
+
+.card-mobile{
+  width:100%;
+}
+
+.stars-outer{
+    position: relative;
+    display:inline-block;
+    color:#ccc
+}
+
+.stars-inner{
+    position:absolute;
+    top:0;
+    left:0;
+    white-space: nowrap;
+    overflow:hidden;
+    width: 0;
+    color:#f8ce0b
+ 
+   
+}
+.stars-outer::before{
+    
+    font-family: 'Font Awesome Free';
+    font-weight:900;
+    color:#ccc;
+
+}
+a{
+  text-decoration: none;
+}
+
+
+
+
+
+  @media screen and (min-width: 480px) {
+    .star-cover {
+      
+      height:1px;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    .star-cover {
+    
+      height:1px;
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    .star-cover{
+      
+      height:1px;
+    }
+  }
+
+  p{
+    font-family:  Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, sans-serif;
+  }
+  
+
+
+  @media screen and (min-width: 480px) {
+    .userinfo {
+      width: 100px;
+      
+    }
+  }
+  @media screen and (min-width: 768px) {
+    .userinfo {
+      width: 100px;
+      
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    .userinfo{
+      width: 100px;
+      
+    }
+  }
+  ul{
+    list-style-type: none;
+  }
+
+
+  .card{
+    background-color: white;
+}
+
+.fixed-content {
+  position:fixed;
+  overflow-y:scroll;
+  overflow-x:hidden;
+  overflow-y: hidden;
+}
+
+
+  @media screen and (min-width: 768px) {
+    .card {
+      width: 400px;
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    .b-card{
+      width: 420px;
+    }
+  }
+
+  @media screen and (min-width: 480px) {
+    .sch {
+      width: 100%;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    .sch {
+      width: 100%;
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    .b-card{
+      width: 420px;
+    }
+  }
+
+  .fixed-nav {
+    position:sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .fixed-content {
+    position:sticky;
+    overflow-x:hidden;
+    overflow-y: hidden;
+    top:0;
+    z-index: 2;
+  }
+ 
+

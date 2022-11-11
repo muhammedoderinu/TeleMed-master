@@ -1,0 +1,14 @@
+<div>
+    <div class="container-fluid card">
+        <div *ngFor=" let data of users$ | async;" class='card-body'>
+            <div  class="d-flex justify-content-between">
+                <p class="text-success text-bold d-none d-md-block">Welcome {{data.username}}</p>
+                <a class="link-dark" href ="/feed">Find doctors</a>
+                <a class='link-dark' href="">Services</a>
+                <a class="link-dark" href = "register-doctor">Switch Account</a>
+            </div>
+          
+        </div>
+
+    </div>
+</div>

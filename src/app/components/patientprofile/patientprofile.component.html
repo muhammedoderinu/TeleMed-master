@@ -1,0 +1,98 @@
+
+<div class="container">
+    <div    class="card container-fluid">
+        <div class="card-body">
+          <form class="custom__form">
+            <p>Add image</p>
+            <div class="custom__image-container">
+              <label id="add-img-label" for="add-single-img"><img src="{{avatar_url}}"></label>
+              <input (change)="onSelectFile($event)" onclick="value = null" type="file" id="add-single-img" accept="image/jpeg" />
+            </div>
+          
+          </form>
+              
+           
+            <div class=" mt-2 d-flex justify-content-between">
+                <div class="">
+                    <p class="text-bold">{{username}} {{''}} </p>
+                    <p class="text-muted mb-0">{{''}}</p>                                      
+                </div> 
+                <div>
+                    <button class="btn btn-success float-end btn-sm">
+                        <span class="badge rounded-pill badge-success" (click)="open(content)">Update Profile</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="mt-2 mb-2" >
+                <div class="stars-outer">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+        
+                    <div class="stars-inner" style="width:90%;">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                    </div>
+    
+                </div>
+            </div>
+            <div>
+
+            </div>
+            <div class="'d-flex ">
+                <button class="btn btn-success btn-sm">
+                    <span class="badge rounded-pill badge-success">Video Call</span>
+                </button>
+               
+            </div>
+
+
+
+            <ng-template #content let-modal>
+                <div class="modal-header">
+                  <h4 class="modal-title" id="modal-basic-title">Profile update</h4>
+                  <button type="button" class="btn-close " aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="mb-3">
+                      <label for="dateOfBirth">Phone</label>
+                      <div class="input-group">
+                        <input id="phone" class="form-control"  name="phone" >
+                      </div>
+
+                      <label class="mt-2" for="address">Address</label>
+                      <div class="input-group">
+                        <input id="address" class="form-control"  name="address" >
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-success btn-sm" (click)="modal.close('Save click')">Update</button>
+                </div>
+              </ng-template>
+              
+              
+           
+            
+    
+                
+
+        </div>
+
+       
+
+
+    </div>
+
+   
+  
+</div>
+

@@ -1,0 +1,59 @@
+
+  .center{
+    height:80%;
+    width: 80%;
+  }
+
+  .schedule-Card{
+    background-color:white;
+    width:fit-content
+}
+
+.demo-inline-calendar-card {
+    width: 300px;
+  }
+  p{
+    font-family:  Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, sans-serif;
+  }
+  h3{
+    font-family:  Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, sans-serif;
+  }
+
+  .fixed-content {
+    position:sticky;
+    overflow-x:hidden;
+    overflow-y: hidden;
+    top:0;
+    z-index: 2;
+  }
+  .fixed-nav {
+    position:sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 150px;
+    width: 40%;
+  }
+  .center2{
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 120px;
+    width: 40%;
+
+  }
+  .fs{
+    font-size: 10px;
+  }
+
+ 
+
+  
+
+  

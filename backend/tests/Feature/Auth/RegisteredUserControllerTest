@@ -1,0 +1,20 @@
+<?php
+use Illuminate\Foundation\Testing\RefreshDatabase;
+use function Pest\Laravel\assertAuthenticated;
+
+uses(RefreshDatabase::class);
+
+it('can register user', function () {
+    $data = [
+        'first_name' => fake()->firstName,
+        'last_name' => fake()->lastName,
+        'username'  => fake()->userName,
+        'email'    =>fake()->email(),
+        'phone'  =>fake()->phoneNumber(),
+        'password'  => fake()->password(6,20)
+    ];
+
+    $this->postJson('/api/register', $data)
+        ->assertOk();
+        $this->assertAuthenticated();
+});

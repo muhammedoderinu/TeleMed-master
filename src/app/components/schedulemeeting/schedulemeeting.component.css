@@ -1,0 +1,33 @@
+.schedule-Card{
+    background-color:white;
+    width:fit-content
+}
+
+.demo-inline-calendar-card {
+    width: 300px;
+  }
+  p{
+    font-family:  Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, sans-serif;
+  }
+  h3{
+    font-family:  Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, sans-serif;
+  }
+
+  .fixed-content {
+    position:sticky;
+    overflow-x:hidden;
+    overflow-y: hidden;
+    top:0;
+    z-index: 2;
+  }
+  .fixed-nav {
+    position:sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+ 
+
+  
+
+  

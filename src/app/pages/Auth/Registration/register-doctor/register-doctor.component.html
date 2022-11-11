@@ -1,0 +1,85 @@
+
+<!-- Pills navs -->
+<html lang="en">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <body style="background-color: #eee;">
+   
+    <div class="container">
+                
+        <div class="card ">
+            <div class="card-body">
+                <section class="">
+                    <div class="container-fluid">
+                      <div class="row">
+                        <div class="col-sm-6 text-black">
+                  
+                          <div class="">
+                            <i class="" style="color: #709085;"></i>
+                          
+
+                            <span class="h1 fw-bold mb-3">VirMed</span>
+
+    
+                           
+                          
+                         
+                          </div>
+                  
+                          <div class="d-flex align-items-center h-custom-2 px-5 ms-xl-4 mt-5 pt-5 pt-xl-0 mt-xl-n5">
+                  
+                            <form >
+                  
+                              
+                              <p class="text-danger" >{{regError.AOSError}}</p>
+                              <div class="form-outline mb-4">
+                                <input (input) = "userInfo.AOS = getValue($event)"  type="text" id="AOS_id" class="form-control form-control-lg" />
+                                <p class="form-label" for="AOS_id">Area of Specialization</p>
+                              </div>
+
+                              <p class="text-danger" >{{regError.pinError}}</p>
+                              <div class="form-outline mb-4">
+                                <input (input) = "userInfo.pin = getValue($event)" type="password" id="PIN_id" class="form-control form-control-lg" />
+                                <p class="form-label" for="PIN_id">PIN</p>
+                              </div>
+
+                             
+                              <div class="form-outline mb-4">
+                                <input (input) = "confirmPin = getValue($event)" type="password" id="confirm_PIN_id" class="form-control form-control-lg" />
+                                <p class="form-label" for="confirm_PIN_id">Confirm PIN</p>
+                              </div>
+
+                              
+                  
+                              <div class=" mb-4">
+                                <button (click) = "getUser()" class="btn btn-success block" type="submit">Register</button>
+                              </div>
+
+                              <div>
+                                <p class="text-muted">If you have an account</p><a href="login" class="link-success">Login</a>
+                              </div>
+                  
+                             
+                            </form>
+                  
+                          </div>
+                  
+                        </div>
+                        <div class="col-sm-6 px-0 d-none d-sm-block">
+                          <img  src="./assets/image/doctor.jpg"
+                            alt="Login image" class="w-100 vh-100" style="object-fit: cover; object-position: left;">
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+            
+
+            </div>
+        </div>
+       
+    </div>
+       
+</body>
+</html>
+
+
+

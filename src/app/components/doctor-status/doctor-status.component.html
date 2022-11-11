@@ -1,0 +1,54 @@
+
+<div  class="card container-fluid">
+    
+
+    
+    <div  class="card-body">
+        <div *ngIf="doctor" class="box1 gfg align-items-center">
+
+            <img 
+            src={{doctor.user.avatar_url}}
+            class="text-success first-txt "
+            alt=''><h1 class="text-success txt mt-3 text-center">{{initials}}</h1>
+                                
+       
+        </div>
+        
+        <div class="d-flex justify-content-between">
+            <div *ngIf="doctor" class="">
+                <p class="text-bold"> Dr {{doctor.user.username}} </p>
+                <p class="text-muted mb-0">{{doctor.specialization}}</p>                                      
+            </div> 
+            <div>
+                <button class="btn btn-success btn-sm">
+                    <span class="badge rounded-pill badge-success">Video chat</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="mt-2 mb-2" >
+            <div class="stars-outer">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+    
+                <div class="stars-inner" style="width:90%;">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                </div>
+
+            </div>
+        </div>
+        <a [routerLink]="['/chat']" [queryParams]= '{id: user.id, username:doctor.user.username , peerId:doctor.user.id}' >
+            <button class="btn float-end btn-success btn-sm">
+            <span class="badge rounded-pill badge-success">Message</span>
+            </button></a>
+    </div>
+    
+
+</div>

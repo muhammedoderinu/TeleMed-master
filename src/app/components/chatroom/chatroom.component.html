@@ -1,0 +1,139 @@
+
+
+
+<div *ngIf='chats' class="'container">
+    <div class="card">
+        <div class="card-header " style= "height:50px;">
+          <div class="form-outline mb-3 d-flex">
+            <input type="search" id="form1" class="form-control" />
+            
+            <button type="button" class="btn btn-success">
+            <i class="bi bi-search"></i>
+            </button>
+        </div>
+        </div>
+        <div  class = " chat-container d-none d-md-block card-body">
+             
+            <div class="mb-5" >
+
+                <ul>
+               
+                <div  *ngFor=" let chat of chats index as i " class="">
+                  <div>
+
+                
+                    <li (click)="loadChat(chat)"  class="mb-3" data-toggle="modal" data-target="#chatModal ">
+                      <div class="d-flex justify-content-between align-items-center">
+                          <div class="d-flex align-items-center">
+                              <a href="patientprofile"> 
+                            <img
+                              src="https://mdbootstrap.com/img/new/avatars/8.jpg"
+                                alt=""
+                                  style="width: 35px; height: 35px"
+                                    class="rounded-circle" /></a>
+                            
+                            <div *ngIf="chat.users[0].id == patient.id" class="ms-3">
+                              <p class="fw-light mb-1 text-dark">{{chat.users[1].username}}</p>
+                            </div>
+                            <div *ngIf="chat.users[0].id != patient.id" class="ms-3">
+                              <p class="fw-light mb-1 text-dark">{{chat.users[0].username}}</p>
+                            </div>
+                            
+                          </div>
+                          <span class="badge  rounded-pill badge-success">Active</span>
+                        
+                      </div>
+      
+                      <div class="d-flex ml-5 ms-5 justify-content-between align-items-center">
+                         <p class="text-muted mb-0">{{chat.last_message.user.username }}:  {{chat.last_message.content}} </p> 
+                        </div>
+                        
+                   </li>
+                     </div>
+
+
+                  </div>
+                
+                </ul>
+            </div>
+          
+        </div>
+
+      
+
+        <!-- mobile-->
+
+        <div class = "chat-container d-block d-md-none card-body">
+             
+          <div class="mb-5 ">
+
+              <ul>
+             
+              <div  *ngFor=" let chat of chats index as i " class="">
+               
+
+                  <li  *ngIf="chat.users[0].id == patient.id" [routerLink]="['/chat']" [queryParams]="{chatId:chat.id, username:chat.users[1].username, id:chat.users[1].id}" class="mb-5" data-toggle="modal" data-target="#chatModal ">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="d-flex align-items-center">
+                            <a href="patientprofile"> 
+                          <img
+                            src="https://mdbootstrap.com/img/new/avatars/8.jpg"
+                              alt=""
+                                style="width: 45px; height: 45px"
+                                  class="rounded-circle" /></a>
+                          
+                                  
+                                    <p class="fw-light mb-1 ms-3 text-dark">{{chat.users[1].username}}</p>
+                                  
+                                 
+                          
+                        </div>
+                        <span class="badge  rounded-pill badge-success">Active</span>
+                      
+                    </div>
+    
+                    <div class="d-flex  ms-5 justify-content-between align-items-center">
+                        <p class="text-muted mb-0">{{chat.last_message.user.username }}: {{chat.last_message.content}}</p>
+                      </div>
+                      
+                 </li>
+
+                 <li  *ngIf="chat.users[0].id != patient.id" [routerLink]="['/chat']" [queryParams]="{chatId:chat.id, username:chat.users[0].username, id:chat.users[0].id}" class="mb-5" data-toggle="modal" data-target="#chatModal ">
+                  <div class="d-flex justify-content-between align-items-center">
+                      <div class="d-flex align-items-center">
+                          <a href="patientprofile"> 
+                        <img
+                          src="https://mdbootstrap.com/img/new/avatars/8.jpg"
+                            alt=""
+                              style="width: 45px; height: 45px"
+                                class="rounded-circle" /></a>
+                                
+                                  <p class="fw-light mb-1 ms-3 text-dark">{{chat.users[0].username}}</p>
+                                
+                        
+                      </div>
+                      <span class="badge  rounded-pill badge-success">Active</span>
+                    
+                  </div>
+  
+                  <div class="d-flex  ms-5 justify-content-between align-items-center">
+                      <p class="text-muted mb-0">{{chat.last_message.user.username }}: {{chat.last_message.content}}</p>
+                    </div>
+                    
+               </li>
+
+                </div>
+              
+              </ul>
+          </div>
+        
+      </div>
+    </div>
+</div>
+
+<div class ='center' *ngIf="!chats">
+  <div class="spinner-border text-success " role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+
+</div>

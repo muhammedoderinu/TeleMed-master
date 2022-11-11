@@ -1,0 +1,23 @@
+<div id="videos">
+    <video #user_1 class="video-player" autoplay="true"  autoplay playsinline ></video>
+    <video class="video-player"  #user_2 autoplay playsinline></video>
+
+    <div id="controls">
+        <div (click)="toggleCamera()"class="control-container" #camera_btn id="camera_btn">
+            <i class="fa fa-video-camera" aria-hidden="true"></i>
+            
+        </div>
+
+        <div (click)='toggleMic()' class="control-container" #mic_btn id="mic_btn">
+            <i class="fa fa-microphone" aria-hidden="true"></i>
+            
+        </div>
+
+        <div  class=" icon " id="leave-btn">
+            <i class="fa fa-white fa-phone" aria-hidden="true"></i>  
+        </div>
+
+       </div>
+</div>
+
+

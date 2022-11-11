@@ -1,0 +1,56 @@
+
+<html lang="en">
+   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+   
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <body style="background-color:rgba(250, 250, 250)">
+        <div class="fixed-nav mb-2">
+            <app-navbar></app-navbar>
+        </div>
+      
+        <div class="container">
+            <div class="d-none  d-md-block">
+                <div class="row container-fluid">
+
+                    <div class="col-6 ">
+                        <div class="fixed-content">
+                            <app-doctorprofile (valueChange) = 'insertDoctor($event)' ></app-doctorprofile>
+                        </div>
+                   
+                    </div>
+                
+                    <div class="col-6 ">
+                        <div>
+                            <app-doctor-status [doctor] = 'doctor' [initials]="initials"  ></app-doctor-status>
+                        </div>
+                        <div class="mt-2">
+                            <app-doctor-summary></app-doctor-summary>
+                        </div>
+                
+                    </div>
+    
+                
+                </div>
+
+            </div>
+
+           
+
+        </div>
+
+        <section class="text-center container-fluid align-item-center card-mobile  d-block d-md-none">
+            <app-doctorprofile></app-doctorprofile>
+        </section>
+
+       
+       
+
+    </body>
+
+        
+

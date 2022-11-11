@@ -1,0 +1,94 @@
+.stars-outer{
+    position: relative;
+    display:inline-block;
+    color:#ccc
+}
+
+.stars-inner{
+    position:absolute;
+    top:0;
+    left:0;
+    white-space: nowrap;
+    overflow:hidden;
+    width: 0;
+    color:#f8ce0b
+ 
+   
+}
+.stars-outer::before{
+    
+    font-family: 'Font Awesome Free';
+    font-weight:900;
+    color:#ccc;
+
+}
+
+.txt{
+ 
+  font-size: 70px;
+  
+}
+
+.box1{
+	width:100px;
+	height:100px;
+	margin:10px;
+	padding:10px;
+}
+
+.box1 {
+	background:whitesmoke;
+}
+
+.gfg {
+  margin: 3%;
+  position: relative;
+}
+
+.first-txt {
+  position: absolute;
+  top:10px;
+  left: auto;
+}
+
+@media screen and (min-width: 480px) {
+    .d-card {
+      width: 480px;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    .d-card {
+      width: 380px;
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    .d-card{
+      width: 100%;
+    }
+  }
+
+  @media screen and (min-width: 480px) {
+    .p-card {
+      width: 380px;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    .p-card {
+      width: 300px;
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    .p-card{
+      width: 420px;
+    }
+  }
+
+  p{
+    font-family:  Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, sans-serif;
+  }
+
+  h5{
+    font-family:  Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, sans-serif;
+  }
+  
+  

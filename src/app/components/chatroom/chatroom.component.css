@@ -1,0 +1,30 @@
+ul{
+    list-style-type: none;
+  }
+
+  a{
+    text-decoration: none;
+  }
+  .chat-container{
+    overflow-y: auto;
+    height:400px
+  }
+
+  p{
+    font-family:  Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, sans-serif;
+  }
+
+  h3{
+    font-family:  Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, sans-serif;
+  }
+  .card-header{
+    background-color: white;
+  }
+  li{
+    border-bottom: 1px solid whitesmoke;
+  }
+
+  .center{
+    margin-top:200px;
+    margin-left: 300px;
+  }

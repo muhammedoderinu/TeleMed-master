@@ -1,0 +1,161 @@
+html,
+body,
+header,
+
+.bg-custom-1 {
+  background-color: #85144b;
+}
+
+.bg-custom-2 {
+background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+}
+
+.view {
+  height: 100%;
+}
+
+@media (max-width: 740px) {
+  html,
+  body,
+  header,
+  .view {
+    height: 100%;
+  }
+}
+@media (min-width: 800px) and (max-width: 850px) {
+  html,
+  body,
+  header,
+  .view {
+    height: 100%;
+  }
+}
+
+.btn .fa {
+  margin-left: 3px;
+}
+
+.top-nav-collapse {
+  background-color: #424f95 !important;
+}
+
+.navbar:not(.top-nav-collapse) {
+  background: transparent !important;
+}
+
+@media (max-width: 991px) {
+  .navbar:not(.top-nav-collapse) {
+    background: #424f95 !important;
+  }
+}
+
+.btn-white {
+  color: black !important;
+}
+
+h6 {
+  line-height: 1.7;
+}
+
+.rgba-gradient {
+  background: -moz-linear-gradient(45deg, rgba(42, 27, 161, 0.7), rgba(29, 210, 177, 0.7) 100%);
+  background: -webkit-linear-gradient(45deg, rgba(42, 27, 161, 0.7), rgba(29, 210, 177, 0.7) 100%);
+  background: -webkit-box-orient(linear, 45deg, from(rgba(42, 27, 161, 0.7)), to(rgba(29, 210, 177, 0.7)));
+  background: -o-linear-gradient(45deg, rgba(42, 27, 161, 0.7), rgba(29, 210, 177, 0.7) 100%);
+  background: linear-gradient(to 45deg, rgba(42, 27, 161, 0.7), rgba(29, 210, 177, 0.7) 100%);
+}
+    .dark-modal .modal-content {
+      background-color: #292b2c;
+      color: white;
+    }
+    .dark-modal .close {
+      color: white;
+    }
+    .light-blue-backdrop {
+      background-color: #5cb3fd;
+    }
+
+
+
+  .header{
+
+    color: #fff;
+    
+
+  }
+
+  .fixed-nav {
+    position:sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .lefty{
+    height:750px;
+  }
+
+  .righty{
+    height:900px;
+  }
+
+  .fixed-content {
+    position:sticky;
+    overflow-x:hidden;
+    overflow-y: hidden;
+    top:0;
+    z-index: 2;
+  }
+
+  .icon{
+    color:green;
+}
+
+p{
+  font-family:  Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, sans-serif;
+}
+
+h5{
+  font-family:  Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, sans-serif;
+}
+
+
+.fixed-nav {
+  position:sticky;
+  top: 0;
+  z-index: 100;
+}
+
+a{
+  text-decoration: none;
+}
+
+.txt{
+ 
+  font-size: 20px;
+  
+}
+
+.box1{
+	width:30px;
+	height:30px;
+	margin:10px;
+	padding:10px;
+}
+
+.box1 {
+	background:whitesmoke;
+}
+
+.gfg {
+  margin: 3%;
+  position: relative;
+}
+
+.first-txt {
+  position: absolute;
+  top:10px;
+  left: auto;
+}
+
+
+  
+    

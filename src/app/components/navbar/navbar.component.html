@@ -1,0 +1,147 @@
+
+
+      <div class="d-none d-md-block">
+          <div class="card fixed-nav" style="width:100%">
+              <div class="card-body  ">
+                  <div class="d-flex align-items-center justify-content-between">
+
+                      <h3 class="text-bold text-dark">VirMed</h3>
+                      
+                      <a class="text-dark" href="#"><p>Home</p>
+                      </a>
+
+                      <a class="text-dark" href="feed"><p>Feed</p>
+                      </a>
+                  
+          
+                      
+                      <a [routerLink]="['/notification']" [queryParams]="{id:user.id}" class="   position-relative">
+                          <i class="fa fa-lg fa-bell icon" aria-hidden="true"></i>
+                          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                          1
+                          <span class="visually-hidden">unread messages</span>
+                          </span>
+                      </a>
+          
+                      
+                      <a href="chat-room" class=" position-relative ">
+                          <i class="fa fa-comments icon " aria-hidden="true"></i>
+                          <span class="position-absolute  top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                          1
+                          <span class="visually-hidden">unread messages</span>
+                          </span>
+                      </a>
+
+                          
+                     
+                        <div *ngIf = 'user' class="d-flex align-item-center">
+
+                            <p >{{user.username}}</p>
+                            <div    ngbDropdown>
+                                <img uclass="btn btn-success" id="gfg" 
+                                        ngbDropdownToggle 
+                                        src={{user.avatarUrl}}
+                                        alt=""
+                                        
+                                            style="width: 45px; height: 45px"
+                                            class="rounded-circle">
+                                    
+                                <div ngbDropdownMenu="gfg">
+                                    <a href ='patientprofile' ngbDropdownItem>Profile</a>
+                                    <button ngbDropdownItem>Log out</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                  
+                </div>
+                        
+                          
+                     
+                  
+                  
+            </div>
+                    
+              
+        </div>
+
+
+
+
+        <!--small screen-->
+
+        
+            <div class="card d-block d-md-none ">
+                <div class="card-body">
+                
+
+                <div class="d-flex justify-content-between">    
+                    <button type="button"
+                        class="btn  ms-1 btn-success" 
+                        (click)="collapse.toggle()" 
+                        [attr.aria-expanded]="!gfg"
+                        aria-controls="collapseExample">
+                        <i class="fa fa-bars" aria-hidden="true"></i>
+                     </button>
+                     
+               <div *ngIf='user' class="d-flex align-item-center">
+                        <p>{{user.username}}</p>
+                        <div ngbDropdown>
+                        <img  uclass="btn btn-success" id="gfg" 
+                                ngbDropdownToggle 
+                                src={{user.avatarUrl}}
+                                alt=""
+                                
+                                    style="width: 45px; height: 45px"
+                                    class="rounded-circle">
+                                
+                        <div ngbDropdownMenu="gfg">
+                            <a href ='patientprofile' ngbDropdownItem>Profile</a>
+                            <button ngbDropdownItem>Log out</button>
+                        </div>
+                        </div>
+                    </div>
+
+                  
+                </div>
+                
+            
+                    <div #collapse="ngbCollapse" 
+                        [(ngbCollapse)]="gfg">
+                        <div class=" mt-1 card">
+                        <div class="card-body">
+                            <a class="text-dark" href="#"><p>Home</p>
+                            </a>
+                            <a class="text-dark" href="feed"><p>Feed</p>
+                            </a> 
+                            <div>
+                                
+                                <a type="" class="  position-relative">
+                                    <i class="fa fa-lg fa-bell icon" aria-hidden="true"></i>
+                                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                    9+
+                                    <p class="visually-hidden"> Unread messages</p>
+                                    </span>
+                                </a>
+                            </div>
+
+                            <div class="mt-2">
+
+                                <a href="chat-room" class=" position-relative ">
+                                    <i class="fa fa-comments fa-lg icon " aria-hidden="true"></i>
+                                    <span class="position-absolute  top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                    9+
+                                    <span class="visually-hidden">unread messages</span>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+  
+      
+
